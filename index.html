@@ -14,6 +14,48 @@ return computerChoice
 };
 
 
+function playRound (playerSelection, computerSelection) {
+let player= prompt("what?");
+player = playerSelection;
+    if (playerSelection == "rock" && computerSelection == "scissors") {
+        return "Rock beats scissors. You win!";
+    }
+else if (playerSelection == "paper" && computerSelection == "scissors") {
+    return "Scissors beats paper. You lost!"
+}
+else if (playerSelection== "scissors" && computerSelection== "paper") {
+    return "Scissors beats paper. You win!"
+}
+else if (playerSelection == "rock" && computerSelection== "rock") {
+    return "it's a tie!"
+}
+else if ( playerSelection == "rock" && computerSelection== "paper") {
+    return "Paper beats rock. You lost!"
+}
+else if (playerSelection== "paper" && computerSelection== "rock") {
+    return "Paper beats rock. You win!"
+}
+else if (playerSelection== "paper" && computerSelection== "paper" ) {
+    return "it's a tie!"
+}
+else if (playerSelection== "scissors" && computerSelection=="scissors") {
+    return "it's a tie!"
+}
+else if (playerSelection== "scissors" && computerSelection== "rock") {
+    return "Rock beats scissors. You lost!"
+}
+}
+ 
+
+
+
+
+
+
+const computerSelection = computerPlay;
+console.log(playRound(playerSelection, computerSelection));
+
+
 
 
 </script>
