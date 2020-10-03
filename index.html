@@ -7,6 +7,12 @@
         
         <script>
 // Your game is going to play against the computer, so begin with a function called computerPlay that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’. We’ll use this function in the game to make the computer’s play.
+//another way of random array :
+//function computerPlay (random) {
+//return random[Math.floor(Math.random()*random.length)];
+//}
+//let random = ["rock", "paper", "scissors"];
+
 function computerPlay () {
 let computerRandom = ["rock", "paper", "scissors"];
  let computerChoice = computerRandom[Math.floor(Math.random() * computerRandom.length)];
@@ -15,34 +21,42 @@ return computerChoice
 
 
 function playRound (playerSelection, computerSelection) {
-    if (playerSelection == "rock" && computerSelection == "scissors") {
-        return "Rock beats scissors. You win!";
+if (playerSelection == "rock") {
+    if (computerSelection == "paper") {
+        return "Paper beats rock. You lost!"
     }
-else if (playerSelection == "paper" && computerSelection == "scissors") {
-    return "Scissors beats paper. You lost!"
+    else if (computerSelection=="scissors") {
+        return "Rock beats scissors. You win!"
+    } 
+    else if (computerSelection=="rock") {
+        return "Tie!"
+    }
 }
-else if (playerSelection== "scissors" && computerSelection== "paper") {
-    return "Scissors beats paper. You win!"
+else if (playerSelection=="paper") {
+    if (computerSelection== "scissors") {
+        return "Scissors beats paper. You lost!"
+    }
+    else if (computerSelection=="rock") {
+        return "Paper beats rock. You win!"
+    }
+    else if (computerSelection=="paper") {
+        return "Tie!"
+    }
 }
-else if (playerSelection == "rock" && computerSelection== "rock") {
-    return "it's a tie!"
+else if (playerSelection=="scissors") {
+    if (computerSelection=="rock") {
+        return "Rock beats scissors. You lost!"
+    }
+    else if (computerSelection=="paper") {
+        return "Scissors beats paper. You win!"
+    }
+    else if (computerSelection=="scissors") {
+        return "Tie!"
+    }
 }
-else if ( playerSelection == "rock" && computerSelection== "paper") {
-    return "Paper beats rock. You lost!"
+else {
+    return "This is not possible."
 }
-else if (playerSelection== "paper" && computerSelection== "rock") {
-    return "Paper beats rock. You win!"
-}
-else if (playerSelection== "paper" && computerSelection== "paper" ) {
-    return "it's a tie!"
-}
-else if (playerSelection== "scissors" && computerSelection=="scissors") {
-    return "it's a tie!"
-}
-else if (playerSelection== "scissors" && computerSelection== "rock") {
-    return "Rock beats scissors. You lost!"
-}
-else {return "this is not possible"}
 }
  
 
