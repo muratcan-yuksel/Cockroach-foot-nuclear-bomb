@@ -25,10 +25,12 @@ function computerPlay () {
     function playRound (playerSelection, computerSelection) {
     if (playerSelection === "rock") {
         if (computerSelection === "paper") {
-            return "Paper beats rock. You lost!", computerScore++;
+            computerScore++;
+            return "Paper beats rock. You lost!" ;
         }
         else if (computerSelection==="scissors") {
-            return "Rock beats scissors. You win!", playerScore++;
+            playerScore++;
+            return "Rock beats scissors. You win!" ;
         } 
         else {
             return "Tie!"
@@ -36,10 +38,12 @@ function computerPlay () {
     }
     else if (playerSelection==="paper") {
         if (computerSelection== "scissors") {
-            return "Scissors beats paper. You lost!", computerScore++;
+            computerScore++;
+            return "Scissors beats paper. You lost!" ;
         }
         else if (computerSelection==="rock") {
-            return "Paper beats rock. You win!", playerScore++;
+            playerScore++;
+            return "Paper beats rock. You win!" ;
         }
         else {
             return "Tie!"
@@ -47,10 +51,12 @@ function computerPlay () {
     }
     else if (playerSelection==="scissors") {
         if (computerSelection==="rock") {
-            return "Rock beats scissors. You lost!", computerScore++;
+            computerScore++;
+            return "Rock beats scissors. You lost!" ;
         }
         else if (computerSelection==="paper") {
-            return "Scissors beats paper. You win!", playerScore++;
+            playerScore++;
+            return "Scissors beats paper. You win!" ;
         }
         else {
             return "Tie!"
@@ -72,12 +78,12 @@ function computerPlay () {
     }
     //decides the score
     if (playerScore > computerScore) {
-        console.log ("You are the winner!");
-    } else if ( computerScore < playerScore){
-        console.log ("You are a loser!");
+        console.log (`In this dire struggle against the rise of the machines, you won ${playerScore} times and the machine won ${computerScore} times. You won, my friend, you won.`)
+    } else if ( playerScore < computerScore){
+        console.log (`Against the computer, you won ${playerScore} times and it won ${computerScore} times. You lost. Pathetic.`)
     }
     else {
-        console.log ("All tied up!");
+        console.log ("In the end, no one won.")
     }
 }
     //calls the function
