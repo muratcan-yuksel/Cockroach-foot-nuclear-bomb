@@ -78,16 +78,17 @@ function computerPlay () {
     }
     //decides the score
     if (playerScore > computerScore) {
-        console.log (`In this dire struggle against the rise of the machines, you won ${playerScore} times and the machine won ${computerScore} times. You won, my friend, you won.`)
+        alert (`In this dire struggle against the rise of the machines, you won ${playerScore} times and the machine won ${computerScore} times. You won, my friend, you won.`)
     } else if ( playerScore < computerScore){
-        console.log (`Against the computer, you won ${playerScore} times and it won ${computerScore} times. You lost. Pathetic.`)
+        alert (`Against the computer, you won ${playerScore} times and it won ${computerScore} times. You lost. Pathetic.`)
     }
     else {
-        console.log ("In the end, no one won.")
+        alert("In the end, no one won.")
     }
 }
     //calls the function
     game ();
+
 
 
 
