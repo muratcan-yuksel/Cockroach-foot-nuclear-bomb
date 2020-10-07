@@ -1,4 +1,2 @@
-This is TOP's rock-paper-scissors project
-create a function called "computerPlay" that which returns rock, paper, or scissors randomly.
-Single round of game function: when the user puts an input:
-
+This is TOP's rock-paper-scissors project. 
+It's a game that asks the user to choose a move, assigns the computer to choose a random move, plays the game for 5 times and returns the winner. 

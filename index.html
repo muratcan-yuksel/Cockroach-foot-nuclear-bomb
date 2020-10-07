@@ -6,61 +6,83 @@
     <body>
         
         <script>
-// Your game is going to play against the computer, so begin with a function called computerPlay that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’. We’ll use this function in the game to make the computer’s play.
-//another way of random array :
-//function computerPlay (random) {
-//return random[Math.floor(Math.random()*random.length)];
-//}
-//let random = ["rock", "paper", "scissors"];
+         
+            
+/** The computer will be choosing a random move **/
 
 function computerPlay () {
-let computerRandom = ["rock", "paper", "scissors"];
- let computerChoice = computerRandom[Math.floor(Math.random() * computerRandom.length)];
-return computerChoice
+    let computerRandom = ["rock", "paper", "scissors"];
+     let computerChoice = computerRandom[Math.floor(Math.random() * computerRandom.length)];
+    return computerChoice
+    }
+    /**Declare two variables to keep score of the game **/    
+    let playerScore= 0;
+    let computerScore= 0;
+    
+    
+    /** play one round of the game **/
+    
+    function playRound (playerSelection, computerSelection) {
+    if (playerSelection === "rock") {
+        if (computerSelection === "paper") {
+            return "Paper beats rock. You lost!", computerScore++;
+        }
+        else if (computerSelection==="scissors") {
+            return "Rock beats scissors. You win!", playerScore++;
+        } 
+        else {
+            return "Tie!"
+        }
+    }
+    else if (playerSelection==="paper") {
+        if (computerSelection== "scissors") {
+            return "Scissors beats paper. You lost!", computerScore++;
+        }
+        else if (computerSelection==="rock") {
+            return "Paper beats rock. You win!", playerScore++;
+        }
+        else {
+            return "Tie!"
+        }
+    }
+    else if (playerSelection==="scissors") {
+        if (computerSelection==="rock") {
+            return "Rock beats scissors. You lost!", computerScore++;
+        }
+        else if (computerSelection==="paper") {
+            return "Scissors beats paper. You win!", playerScore++;
+        }
+        else {
+            return "Tie!"
+        }
+    }
+    else {
+        return "This is not possible."
+    }
+    }
+     /** loop the game for 5 times**/
+    function game() {
+        for (let i = 0; i < 5; i++) {
+            let userChoice= prompt ("rock, paper, or scissors?"); //asks the user a choice
+            userChoiceResults = userChoice;
+            playerSelection= userChoiceResults.toLowerCase(); //turns user choice into lowercase
+            let computerSelection= computerPlay();
+            console.log( playRound(playerSelection, computerSelection ));
+        
+    }
+    //decides the score
+    if (playerScore > computerScore) {
+        console.log ("You are the winner!");
+    } else if ( computerScore < playerScore){
+        console.log ("You are a loser!");
+    }
+    else {
+        console.log ("All tied up!");
+    }
 }
+    //calls the function
+    game ();
 
-
-function playRound (playerSelection, computerSelection) {
-if (playerSelection == "rock") {
-    if (computerSelection == "paper") {
-        return "Paper beats rock. You lost!"
-    }
-    else if (computerSelection=="scissors") {
-        return "Rock beats scissors. You win!"
-    } 
-    else if (computerSelection=="rock") {
-        return "Tie!"
-    }
-}
-else if (playerSelection=="paper") {
-    if (computerSelection== "scissors") {
-        return "Scissors beats paper. You lost!"
-    }
-    else if (computerSelection=="rock") {
-        return "Paper beats rock. You win!"
-    }
-    else if (computerSelection=="paper") {
-        return "Tie!"
-    }
-}
-else if (playerSelection=="scissors") {
-    if (computerSelection=="rock") {
-        return "Rock beats scissors. You lost!"
-    }
-    else if (computerSelection=="paper") {
-        return "Scissors beats paper. You win!"
-    }
-    else if (computerSelection=="scissors") {
-        return "Tie!"
-    }
-}
-else {
-    return "This is not possible."
-}
-}
- 
-
-//this works: console.log(playRound(playerSelection, computerPlay()));
 
 
 
