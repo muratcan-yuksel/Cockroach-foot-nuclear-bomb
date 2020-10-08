@@ -1,3 +1,8 @@
-This is TOP's rock-paper-scissors project. 
-It's a game that asks the user to choose a move, assigns the computer to choose a random move, plays the game for 5 times and returns the winner. 
-The game is played on the console.
+Beware in front of the game : Cockroach, foot, nuclear-bomb!
+It's a derivative from the well known rock-paper-scissors, made famous by the legendary tv series That 70's Show. You can find the clip here in which Hyde hilariously explains the game to Fez https://www.youtube.com/watch?v=wRi2j8k0vjo
+The rules aree pretty straightforward:
+Foot beats cockroach
+Nuclear bomb destroys the foot
+Cockroach survives the nuclear bomb
+
+
