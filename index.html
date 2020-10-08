@@ -1,102 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Rock-paper-scissors </title>
+        <title> Cockroach-Foot-Nuclear Bomb </title>
     </head>
     <body>
         
-        <script>
-         
-            
-/** The computer will be choosing a random move **/
-
-function computerPlay () {
-    let computerRandom = ["rock", "paper", "scissors"];
-     let computerChoice = computerRandom[Math.floor(Math.random() * computerRandom.length)];
-    return computerChoice
-    }
-    /**Declare two variables to keep score of the game **/    
-    let playerScore= 0;
-    let computerScore= 0;
-    
-    
-    /** play one round of the game **/
-    
-    function playRound (playerSelection, computerSelection) {
-    if (playerSelection === "rock") {
-        if (computerSelection === "paper") {
-            computerScore++;
-            return "Paper beats rock. You lost!" ;
-        }
-        else if (computerSelection==="scissors") {
-            playerScore++;
-            return "Rock beats scissors. You win!" ;
-        } 
-        else {
-            return "Tie!"
-        }
-    }
-    else if (playerSelection==="paper") {
-        if (computerSelection== "scissors") {
-            computerScore++;
-            return "Scissors beats paper. You lost!" ;
-        }
-        else if (computerSelection==="rock") {
-            playerScore++;
-            return "Paper beats rock. You win!" ;
-        }
-        else {
-            return "Tie!"
-        }
-    }
-    else if (playerSelection==="scissors") {
-        if (computerSelection==="rock") {
-            computerScore++;
-            return "Rock beats scissors. You lost!" ;
-        }
-        else if (computerSelection==="paper") {
-            playerScore++;
-            return "Scissors beats paper. You win!" ;
-        }
-        else {
-            return "Tie!"
-        }
-    }
-    else {
-        return "This is not possible."
-    }
-    }
-     /** loop the game for 5 times**/
-    function game() {
-        for (let i = 0; i < 5; i++) {
-            let userChoice= prompt ("rock, paper, or scissors?"); //asks the user a choice
-            userChoiceResults = userChoice;
-            playerSelection= userChoiceResults.toLowerCase(); //turns user choice into lowercase
-            let computerSelection= computerPlay();
-            console.log( playRound(playerSelection, computerSelection ));
-        
-    }
-    //decides the score
-    if (playerScore > computerScore) {
-        alert (`In this dire struggle against the rise of the machines, you won ${playerScore} times and the machine won ${computerScore} times. You won, my friend, you won.`)
-    } else if ( playerScore < computerScore){
-        alert (`Against the computer, you won ${playerScore} times and it won ${computerScore} times. You lost. Pathetic.`)
-    }
-    else {
-        alert("In the end, no one won.")
-    }
-}
-    //calls the function
-    game ();
-
-
-
-
-
-
-
-
-
-</script>
+        <script type= "text/javascript" src="coding/TOP/projects/rock-paper-scissors"></script>
+          
     </body>
 </html>
