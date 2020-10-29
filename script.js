@@ -57,15 +57,16 @@ function computerPlay () {
     }
     }
      /** loop the game for 5 times**/
-    function game() {
+     //Removing the 5 round game thingy for the UI assigment
+    /*function game() {
         for (let i = 0; i < 5; i++) {
             let userChoice= prompt ("cockroach,foot, or nuclear-bomb?"); //asks the user a choice
             userChoiceResults = userChoice;
             playerSelection= userChoiceResults.toLowerCase(); //turns user choice into lowercase
             let computerSelection= computerPlay();
-            console.log( playRound(playerSelection, computerSelection ));
+            console.log( playRound(playerSelection, computerSelection )); 
         
-    }
+    } */
     //decides the score
     if (playerScore > computerScore) {
         alert (`In this dire struggle against the rise of the machines, you won ${playerScore} times and the machine won ${computerScore} times. You won, my friend, you won.`)
@@ -75,7 +76,15 @@ function computerPlay () {
     else {
         alert("In the end, no one won.")
     }
-}
+//removing the following curly bracket and the game function
+    //}
     //calls the function
-    game ();
+  //  game ();
 
+const buttonCockroach= document.getElementById("cockroach");
+ buttonCockroach.addEventListener("click", functionCockroach => {
+    playerSelection = "cockroach";
+    let computerSelection = computerPlay();
+    alert (playRound(playerSelection,computerSelection));
+
+ });
