@@ -81,10 +81,26 @@ function computerPlay () {
     //calls the function
   //  game ();
 
+  //Get buttons
 const buttonCockroach= document.getElementById("cockroach");
+const buttonFoot= document.getElementById("foot");
+const buttonNuclearBomb= document.getElementById("nuclear");
+
  buttonCockroach.addEventListener("click", functionCockroach => {
     playerSelection = "cockroach";
     let computerSelection = computerPlay();
-    alert (playRound(playerSelection,computerSelection));
+    console.log (playRound(playerSelection,computerSelection));
 
  });
+ 
+buttonFoot.addEventListener("click", functionFoot => {
+    playerSelection= "foot";
+    let computerSelection= computerPlay();
+    console.log(playRound(playerSelection,computerSelection));
+});
+
+buttonNuclearBomb.addEventListener("click", functionNuclear => {
+playerSelection="nuclear-bomb";
+let computerSelection=computerPlay();
+console.log(playRound(playerSelection,computerSelection));
+});
