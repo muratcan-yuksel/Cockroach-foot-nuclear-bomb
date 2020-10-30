@@ -68,14 +68,14 @@ function computerPlay () {
         
     } */
     //decides the score
-    if (playerScore > computerScore) {
+   /* if (playerScore > computerScore) {
         alert (`In this dire struggle against the rise of the machines, you won ${playerScore} times and the machine won ${computerScore} times. You won, my friend, you won.`)
     } else if ( playerScore < computerScore){
         alert (`Against the computer, you won ${playerScore} times and it won ${computerScore} times. You lost. Pathetic.`)
     }
     else {
-        alert("In the end, no one won.")
-    }
+        console.log("In the end, no one won.")
+    }*/
 //removing the following curly bracket and the game function
     //}
     //calls the function
@@ -85,6 +85,8 @@ function computerPlay () {
 const buttonCockroach= document.getElementById("cockroach");
 const buttonFoot= document.getElementById("foot");
 const buttonNuclearBomb= document.getElementById("nuclear");
+
+//add event listeners to the buttons
 
  buttonCockroach.addEventListener("click", functionCockroach => {
     playerSelection = "cockroach";
@@ -104,3 +106,23 @@ playerSelection="nuclear-bomb";
 let computerSelection=computerPlay();
 console.log(playRound(playerSelection,computerSelection));
 });
+
+const resultsContainer= document.getElementById("results");
+
+ // Overriding console object
+ let console = {};
+            
+ // Getting div to insert logs
+ let logger = document.getElementById("logger");
+ 
+ // Adding log method from our console object
+ console.log = text =>
+ {
+     let element = document.createElement("div");
+     let txt = document.createTextNode(text);
+ 
+     element.appendChild(txt);
+     logger.appendChild(element);
+ }
+ 
+
