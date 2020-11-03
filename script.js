@@ -13,43 +13,44 @@ function computerPlay () {
     /** play one round of the game **/
     
     function playRound (playerSelection, computerSelection) {
+        let element = document.querySelector("p");
     if (playerSelection === "cockroach") {
         if (computerSelection === "foot") {
             computerScore++;
-            return "Foot squishes cockroach . You lost!" ;
+            element.textContent="Foot squishes cockroach . You lost!" ;
         }
         else if (computerSelection==="nuclear-bomb") {
             playerScore++;
-            return "Cockroach survives nuclear-bomb. You win!" ;
+            element.textContent= "Cockroach survives nuclear-bomb. You win!" ;
         } 
         else {
-            return "Tie!"
+            element.textContent= "Tie!"
         }
     }
     else if (playerSelection==="foot") {
         if (computerSelection== "nuclear-bomb") {
             computerScore++;
-            return "Nuclear bomb destroys foot. You lost!" ;
+            element.textContent= "Nuclear bomb destroys foot. You lost!" ;
         }
         else if (computerSelection==="cockroach") {
             playerScore++;
-            return "Foot squishes cockroach. You win!" ;
+            element.textContent="Foot squishes cockroach. You win!" ;
         }
         else {
-            return "Tie!"
+            element.textContent= "Tie!"
         }
     }
     else if (playerSelection==="nuclear-bomb") {
         if (computerSelection==="cockroach") {
             computerScore++;
-            return "Cockroach survives nuclear-bomb. You lost!" ;
+            element.textContent= "Cockroach survives nuclear-bomb. You lost!" ;
         }
         else if (computerSelection==="foot") {
             playerScore++;
-            return "Nuclear bomb destroys foot. You win!" ;
+            element.textContent= "Nuclear bomb destroys foot. You win!" ;
         }
         else {
-            return "Tie!"
+            element.textContent= "Tie!"
         }
     }
     else {
@@ -107,8 +108,7 @@ let computerSelection=computerPlay();
 console.log(playRound(playerSelection,computerSelection));
 });
 
-const resultsContainer= document.getElementById("results");
-
+/*
  // Overriding console object
  let console = {};
             
@@ -124,5 +124,13 @@ const resultsContainer= document.getElementById("results");
      element.appendChild(txt);
      logger.appendChild(element);
  }
+ */
+//create a paragraph 
+let para= document.createElement("p");
+ let scores= document.getElementById("scores");
+ scores.appendChild(para);
+ para.innerHTML="wuf"
  
 
+
+//Anounce the winner
