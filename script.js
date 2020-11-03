@@ -14,14 +14,18 @@ function computerPlay () {
     
     function playRound (playerSelection, computerSelection) {
         let element = document.querySelector("p");
+        let computerLiveScore= document.getElementById("computerLive");
+        let playerLiveScore= document.getElementById("playerLive");
     if (playerSelection === "cockroach") {
         if (computerSelection === "foot") {
             computerScore++;
             element.textContent="Foot squishes cockroach . You lost!" ;
+            computerLiveScore.textContent=computerScore;
         }
         else if (computerSelection==="nuclear-bomb") {
             playerScore++;
             element.textContent= "Cockroach survives nuclear-bomb. You win!" ;
+            playerLiveScore.textContent=playerScore;
         } 
         else {
             element.textContent= "Tie!"
@@ -31,10 +35,12 @@ function computerPlay () {
         if (computerSelection== "nuclear-bomb") {
             computerScore++;
             element.textContent= "Nuclear bomb destroys foot. You lost!" ;
+            computerLiveScore.textContent=computerScore;
         }
         else if (computerSelection==="cockroach") {
             playerScore++;
             element.textContent="Foot squishes cockroach. You win!" ;
+            playerLiveScore.textContent=playerScore;
         }
         else {
             element.textContent= "Tie!"
@@ -44,10 +50,12 @@ function computerPlay () {
         if (computerSelection==="cockroach") {
             computerScore++;
             element.textContent= "Cockroach survives nuclear-bomb. You lost!" ;
+            computerLiveScore.textContent=computerScore;
         }
         else if (computerSelection==="foot") {
             playerScore++;
             element.textContent= "Nuclear bomb destroys foot. You win!" ;
+            playerLiveScore.textContent=playerScore;
         }
         else {
             element.textContent= "Tie!"
