@@ -19,13 +19,22 @@ function computerPlay () {
         let element = document.querySelector("p");
         let computerLiveScore= document.getElementById("computerLive");
         let playerLiveScore= document.getElementById("playerLive");
+        //This one increments the score manually. Don't ask why it doesn't do it by itself, I have no idea.
         if (playerScore===4 ) {
-            alert("playerwin");
+            announcement.textContent= "Machines are rising. This time you were lucky enough to win.";
             playerLiveScore.textContent=5;
+            //disable buttons
+            document.getElementById("buttonCockroach").disabled=true;
+            document.getElementById("buttonFoot").disabled=true;
+            document.getElementById("buttonNuclearBomb").disabled=true;
         }
         else if ( computerScore===4 ) {
-            alert("compwin");
+            announcement.textContent= "You've lost against the machine. Let that sink in.";
             computerLiveScore.textContent=5;
+            //disable buttons
+            document.getElementById("buttonCockroach").disabled=true;
+            document.getElementById("buttonFoot").disabled=true;
+            document.getElementById("buttonNuclearBomb").disabled=true;
         }
         
     if (playerSelection === "cockroach") {
@@ -86,6 +95,7 @@ const buttonCockroach= document.getElementById("cockroach");
 const buttonFoot= document.getElementById("foot");
 const buttonNuclearBomb= document.getElementById("nuclear");
 
+
 //add event listeners to the buttons
 
  buttonCockroach.addEventListener("click", functionCockroach => {
@@ -107,12 +117,17 @@ let computerSelection=computerPlay();
 console.log(playRound(playerSelection,computerSelection));
 });
 
-//create a paragraph 
-let para= document.createElement("p");
+//get the scores div
+
  let scores= document.getElementById("scores");
- scores.appendChild(para);
- para.innerHTML="wyyuf"
- 
 
+//Anounce the winner (the text is in the playround function)
+let announcement= document.createElement("p");
+scores.appendChild(announcement);
+//restart button
+let restartButton= document.getElementById("restart");
+//reload the page
+restartButton.addEventListener("click", functionRestart =>{
+location=location;
 
-//Anounce the winner
+});
