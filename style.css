@@ -1,0 +1,19 @@
+
+
+
+
+.buttons{
+    position: relative;
+    top:400px;
+    display: flex;
+    justify-content: center;
+  /*  justify-content: space-evenly; */
+    
+}
+
+.restart{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top:320px;
+}

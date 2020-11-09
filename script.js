@@ -131,3 +131,5 @@ restartButton.addEventListener("click", functionRestart =>{
 location=location;
 
 });
+//The core functionality of the game has finished. From here, the styling goes:
+
