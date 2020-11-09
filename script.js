@@ -16,12 +16,13 @@ function computerPlay () {
      *  **/
     
     function playRound (playerSelection, computerSelection) {
-        let element = document.querySelector("p");
+        let element = document.querySelector("#liveText");
         let computerLiveScore= document.getElementById("computerLive");
         let playerLiveScore= document.getElementById("playerLive");
         //This one increments the score manually. Don't ask why it doesn't do it by itself, I have no idea.
         if (playerScore===4 ) {
-            announcement.textContent= "Machines are rising. This time you were lucky enough to win.";
+            //the next anounces the winner at the end with the same text that anounces the winnner each time
+            element.textContent= "Machines are rising. This time you were lucky enough to win.";
             playerLiveScore.textContent=5;
             //disable buttons
             document.getElementById("buttonCockroach").disabled=true;
@@ -29,7 +30,8 @@ function computerPlay () {
             document.getElementById("buttonNuclearBomb").disabled=true;
         }
         else if ( computerScore===4 ) {
-            announcement.textContent= "You've lost against the machine. Let that sink in.";
+              //the next anounces the winner at the end with the same text that anounces the winnner each time
+            element.textContent= "You've lost against the machine. Let that sink in.";
             computerLiveScore.textContent=5;
             //disable buttons
             document.getElementById("buttonCockroach").disabled=true;
@@ -120,10 +122,13 @@ console.log(playRound(playerSelection,computerSelection));
 //get the scores div
 
  let scores= document.getElementById("scores");
-
+/*
+THIS CODE IS NOT NECESSARY ANYMORE
 //Anounce the winner (the text is in the playround function)
 let announcement= document.createElement("p");
+announcement.setAttribute("id", "anounceWinner")
 scores.appendChild(announcement);
+*/
 //restart button
 let restartButton= document.getElementById("restart");
 //reload the page

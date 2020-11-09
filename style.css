@@ -17,3 +17,10 @@
     justify-content: center;
     top:320px;
 }
+
+#anounceWinner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
