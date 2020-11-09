@@ -12,15 +12,29 @@
 }
 
 .restart{
+    position: fixed;
+    left:600px;
+    top:470px;
+}
+
+#liveText{
     position: relative;
     display: flex;
     justify-content: center;
     top:320px;
+
 }
-
-#anounceWinner{
-    position: relative;
-    display: flex;
-    justify-content: center;
-
+#scoreNumbers{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
+}
+#playerLive{
+    position:relative;
+    top:150px;
+}
+#computerLive{
+    position:relative;
+    top:150px;
 }
