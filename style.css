@@ -1,29 +1,60 @@
 
 
 
+#cockroach {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(145, 12, 12);
+    border: solid 1px rgb(248, 12, 12);
+    border-radius: 50%
+}
+#foot{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(145, 12, 12);
+    border: solid 1px rgb(248, 12, 12);
+    border-radius: 50%
+}
+#nuclear{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(122, 88, 88);
+    border: solid 1px rgb(156, 127, 127);
+    border-radius: 50%
+}
+#restart{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(145, 12, 12);
+    border: solid 1px rgb(248, 12, 12);
+    border-radius: 50%
+}
+
 
 .buttons{
     position: relative;
-    top:400px;
+    top:270px;
     display: flex;
     justify-content: center;
     justify-content: space-evenly; 
+   /* super cool style */
    
     background-color: #000;
-    border: solid 1px #000;
-    border-radius: 50%
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 50%; 
     
 }
 /*when I say position is fixed, it's not web responsive. That's a problem */
 .restart{
     position: absolute;
-    top: 70px;
+    top: 170px;
+    
 }
 #liveText{
     position: relative;
     display: flex;
     justify-content: center;
-    top:320px;
+    top:280px;
 
 }
 #scoreNumbers{
@@ -34,10 +65,10 @@
 }
 #playerLive{
     position:relative;
-    top:150px;
+    top:30px;
     
 }
 #computerLive{
     position:relative;
-    top:150px;
+    top:30px;
     
