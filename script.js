@@ -137,4 +137,4 @@ location=location;
 
 });
 //The core functionality of the game has finished. From here, the styling goes:
-
+//document.getElementById("computerLive").style.border= "2px solid black";

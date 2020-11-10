@@ -10,13 +10,11 @@
   /*  justify-content: space-evenly; */
     
 }
-
+/*when I say position is fixed, it's not web responsive. That's a problem */
 .restart{
-    position: fixed;
-    left:600px;
-    top:470px;
+    position: absolute;
+    top: 70px;
 }
-
 #liveText{
     position: relative;
     display: flex;
