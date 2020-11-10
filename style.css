@@ -7,7 +7,11 @@
     top:400px;
     display: flex;
     justify-content: center;
-  /*  justify-content: space-evenly; */
+    justify-content: space-evenly; 
+   
+    background-color: #000;
+    border: solid 1px #000;
+    border-radius: 50%
     
 }
 /*when I say position is fixed, it's not web responsive. That's a problem */
@@ -31,8 +35,9 @@
 #playerLive{
     position:relative;
     top:150px;
+    
 }
 #computerLive{
     position:relative;
     top:150px;
-}
+    
