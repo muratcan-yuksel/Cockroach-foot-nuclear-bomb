@@ -89,3 +89,10 @@ button{
     position:relative;
     top:15px;
 }
+
+#playerText{
+    position:absolute;
+    top:10px;
+    left:10px;
+
+}

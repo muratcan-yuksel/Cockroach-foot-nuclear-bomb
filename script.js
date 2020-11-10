@@ -23,7 +23,7 @@ function computerPlay () {
         if (playerScore===4 ) {
             //the next anounces the winner at the end with the same text that anounces the winnner each time
             element.textContent= "Machines are rising. This time you were lucky enough to win.";
-            playerLiveScore.textContent=5;
+            playerLiveScore.textContent="Player = " + 5;
             //disable buttons
             document.getElementById("buttonCockroach").disabled=true;
             document.getElementById("buttonFoot").disabled=true;
@@ -32,7 +32,7 @@ function computerPlay () {
         else if ( computerScore===4 ) {
               //the next anounces the winner at the end with the same text that anounces the winnner each time
             element.textContent= "You've lost against the machine. Let that sink in.";
-            computerLiveScore.textContent=5;
+            computerLiveScore.textContent="CPU = " + 5;
             //disable buttons
             document.getElementById("buttonCockroach").disabled=true;
             document.getElementById("buttonFoot").disabled=true;
@@ -43,12 +43,12 @@ function computerPlay () {
         if (computerSelection === "foot") {
             computerScore++;
             element.textContent="Foot squishes cockroach . You lost!" ;
-            computerLiveScore.textContent=computerScore;
+            computerLiveScore.textContent="CPU = " + computerScore;
         }
         else if (computerSelection==="nuclear-bomb") {
             playerScore++;
             element.textContent= "Cockroach survives nuclear-bomb. You win!" ;
-            playerLiveScore.textContent=playerScore;
+            playerLiveScore.textContent="Player = " + playerScore;
         } 
       
         else {
@@ -59,12 +59,12 @@ function computerPlay () {
         if (computerSelection== "nuclear-bomb") {
             computerScore++;
             element.textContent= "Nuclear bomb destroys foot. You lost!" ;
-            computerLiveScore.textContent=computerScore;
+            computerLiveScore.textContent="CPU = " + computerScore;
         }
         else if (computerSelection==="cockroach") {
             playerScore++;
             element.textContent="Foot squishes cockroach. You win!" ;
-            playerLiveScore.textContent=playerScore;
+            playerLiveScore.textContent="Player = " + playerScore;
         }
         else {
             element.textContent= "Tie!"
@@ -74,12 +74,12 @@ function computerPlay () {
         if (computerSelection==="cockroach") {
             computerScore++;
             element.textContent= "Cockroach survives nuclear-bomb. You lost!" ;
-            computerLiveScore.textContent=computerScore;
+            computerLiveScore.textContent="CPU = " + computerScore;
         }
         else if (computerSelection==="foot") {
             playerScore++;
             element.textContent= "Nuclear bomb destroys foot. You win!" ;
-            playerLiveScore.textContent=playerScore;
+            playerLiveScore.textContent="Player = " + playerScore;
         }
         else {
             element.textContent= "Tie!"
