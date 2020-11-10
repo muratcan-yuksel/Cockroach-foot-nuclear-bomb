@@ -1,33 +1,45 @@
+html {
+    background-color:black;
+    
+    
+}
+button{
+    color: white;
+    font-size: 15px;
+    font-family: "Lucida Console", Courier, monospace;
 
+}
 
 
 #cockroach {
     width: 100px;
     height: 100px;
-    background-color: rgb(145, 12, 12);
-    border: solid 1px rgb(248, 12, 12);
+    background-color: black;
+    border: solid 1px rgb(230, 221, 221);
     border-radius: 50%
+    
 }
 #foot{
     width: 100px;
     height: 100px;
-    background-color: rgb(145, 12, 12);
-    border: solid 1px rgb(248, 12, 12);
+    background-color:#080102;
+    border: solid 1px white;
     border-radius: 50%
 }
 #nuclear{
     width: 100px;
     height: 100px;
-    background-color: rgb(122, 88, 88);
-    border: solid 1px rgb(156, 127, 127);
+    background-color:#080102;
+    border: solid 1px white;
     border-radius: 50%
 }
 #restart{
     width: 100px;
     height: 100px;
-    background-color: rgb(145, 12, 12);
-    border: solid 1px rgb(248, 12, 12);
+    background-color: red;
+    border: solid 1px white;
     border-radius: 50%
+
 }
 
 
@@ -37,13 +49,14 @@
     display: flex;
     justify-content: center;
     justify-content: space-evenly; 
-   /* super cool style */
+   /* super cool style */ 
    
-    background-color: #000;
-    border: solid 1px rgb(0, 0, 0);
-    border-radius: 50%; 
+    background-color: white;
+    border: solid 1px rgb(241, 231, 231);
+    border-radius: 50%;  
     
 }
+
 /*when I say position is fixed, it's not web responsive. That's a problem */
 .restart{
     position: absolute;
@@ -55,20 +68,24 @@
     display: flex;
     justify-content: center;
     top:280px;
-
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    color:white;
 }
 #scoreNumbers{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+  color:white;
 }
 #playerLive{
     position:relative;
-    top:30px;
+    top:15px;
     
 }
 #computerLive{
     position:relative;
-    top:30px;
-    
+    top:15px;
+}
